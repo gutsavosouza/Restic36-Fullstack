@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="main-container">
+            <img src="./resources/bear-logo.png" id="form-image">
+            <div class="box-container">
+                <div class="box-header-container">
+                    <span class="text-type-1" id="form-text-2">Bear</span>
+                    <span class="text-type-2">Acesse ou crie sua conta!</span>
+
+                    <div class="buttons-container" onclick="transitionForm()">
+                        <button id="btn-open" class="button rounded yellow"><span>Entrar</span></button>
+                        <button id="btn-register" class="button rounded transparent"><span>Cadastrar</span></button>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <form id="form-login">
+                        <input type="email" id="email" name="email" placeholder="Email" required><br>
+                        <div id="password-input">
+                            <div class="icons">
+                                <i class='far fa-eye' onclick="changeVisibility(this)"></i>
+                            </div>
+                            <input type="password" id="password" name="password" placeholder="Senha" required class="pass"><br>
+                        </div>
+                        
+                        <span>Esqueceu sua senha? <u>Clique aqui</u> </span><br><br>
+                        <button type="submit" class="button yellow">Entrar</button>
+                    </form>
+                    <form id="form-register" class="hidden">
+                        <input type="text" id="name" name="name" placeholder="Nome" required><br>
+                        <input type="email" id="email" name="email" placeholder="Email" required><br>
+                        <div class="password-input">
+                            <div class="icons">
+                                <i class='far fa-eye' onclick="changeVisibility(this)"></i>
+                            </div>
+                            <input type="password" id="password" name="password" placeholder="Senha" required class="pass"><br>
+                        </div>
+                        <div class="password-input">
+                            <div class="icons">
+                                <i class='far fa-eye' onclick="changeVisibility(this)"></i>
+                            </div>
+                            <input type="password" id="password" name="password" placeholder="Confirme sua senha" required class="pass"><br>
+                        </div>
+                        <button type="submit" class="button yellow">Cadastrar</button>
+                    </form>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="./scripts/password_visibility.js"></script>
+    <script src="./scripts/transition.js"></script>
+</body>
+</html>
